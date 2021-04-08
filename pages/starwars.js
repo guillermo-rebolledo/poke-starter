@@ -16,14 +16,14 @@ export default function StarWars() {
 				<meta property="og:site_name" content="Awesome Star Wars Text" />
 				<meta
 					property="og:image"
-					content={`${process.env.BASE_URL}/api/preview.png?text=hello`}
+					content={`https://dazzling-fermi-cdaf6e.netlify.app/api/preview.png?text=hello`}
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:title" content="Awesome Star Wars Text" />
 				<meta name="twitter:description" content="Hello world!" />
 				<meta
 					name="twitter:image"
-					content={`${process.env.BASE_URL}/api/preview.png?text=hello`}
+					content={`https://dazzling-fermi-cdaf6e.netlify.app/api/preview.png?text=hello`}
 				/>
 			</Head>
 			<div className="text-bg">
