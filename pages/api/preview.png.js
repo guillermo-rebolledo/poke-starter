@@ -8,7 +8,10 @@ export default async function handler(req, res) {
 		const page = await browser.newPage();
 		await page.goto(`${process.env.BASE_URL}/api/image?text=${urlencodedText}`);
 		const ogImageElement = await page.$('#og-image');
-		const image = await ogImageElement.screenshot();
+		const image = await ogImageElement.screenshot({
+			type: 'png',
+			encoding: 'binary',
+		});
 		await page.close();
 		await browser.close();
 
