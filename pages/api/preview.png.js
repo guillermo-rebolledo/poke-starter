@@ -6,7 +6,9 @@ export default async function handler(req, res) {
 		const urlencodedText = encodeURIComponent(text);
 		const browser = await pup.launch();
 		const page = await browser.newPage();
-		await page.goto(`${process.env.BASE_URL}/api/image?text=${urlencodedText}`);
+		await page.goto(
+			`https://dazzling-fermi-cdaf6e.netlify.app/api/image?text=${urlencodedText}`,
+		);
 		const ogImageElement = await page.$('#og-image');
 		const image = await ogImageElement.screenshot({
 			type: 'png',
