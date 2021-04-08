@@ -1,0 +1,11 @@
+.title {
+	color: #feda4a;
+	font-family: 'Pathway Gothic One', sans-serif;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 6px;
+	line-height: 150%;
+	perspective: 400px;
+	text-align: center;
+	padding: 32px;
+}

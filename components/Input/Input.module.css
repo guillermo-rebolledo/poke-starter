@@ -1,4 +1,10 @@
 .input {
 	display: block;
 	width: 100%;
+	background-color: #000;
+	border: 2px solid #feda4a;
+	border-radius: 5px;
+	color: #feda4a;
+	outline-color: #feda4a;
+	font-family: 'Pathway Gothic One', sans-serif;
 }

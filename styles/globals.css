@@ -83,7 +83,7 @@ img {
 	position: relative;
 	top: 99999px;
 	transform-origin: 50% 100%;
-	animation: crawl 60s linear;
+	animation: crawl 45s linear;
 }
 
 .crawl > .title {
@@ -105,4 +105,32 @@ img {
 		top: -6000px;
 		transform: rotateX(25deg) translateZ(-2500px);
 	}
+}
+
+.generate__container {
+	padding: 32px;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: #000;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.generate__button {
+	border-radius: 5px;
+	border: 2px solid #feda4a;
+	background-color: #000;
+	color: #feda4a;
+	font-family: 'Pathway Gothic One', sans-serif;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 6px;
+	line-height: 150%;
+	perspective: 400px;
+	cursor: pointer;
+	margin: 32px 0;
 }

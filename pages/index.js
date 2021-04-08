@@ -1,23 +1,33 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+import { useText } from '@context/TextContext';
+import Input from '@components/Input';
+import Title from '@components/Title';
 
 export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	const router = useRouter();
+	const { state, dispatch } = useText();
+	const [inputValue, setInputValue] = useState(state.text || '');
 
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
-
-      <Footer />
-    </div>
-  )
+	return (
+		<div className="generate__container">
+			<Title>Hello there! Type your message below.</Title>
+			<Input
+				value={inputValue}
+				onChange={(e) => setInputValue(e.target.value)}
+			/>
+			<button
+				className="generate__button"
+				onClick={() => {
+					dispatch({
+						type: 'UPDATE',
+						payload: inputValue,
+					});
+					router.push('/starwars');
+				}}
+			>
+				Enter Hyperspace!
+			</button>
+		</div>
+	);
 }
